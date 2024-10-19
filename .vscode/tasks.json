@@ -1,0 +1,35 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "build",
+            "command": "g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-std=c++17",
+                "-g",
+                "${file}",
+                "../src/input/DTMInput.cpp",
+                "../src/structure/DTM.cpp",
+                "../src/structure/state.cpp",
+                "../src/structure/symbol.cpp",
+                "../src/structure/transitionSet.cpp",
+                "../src/structure/tape.cpp",
+                "-o",
+                "${workspaceFolder}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Tarea generada por el depurador."
+        }
+    ],
+    "version": "2.0.0"
+}

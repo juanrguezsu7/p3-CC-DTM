@@ -1,0 +1,47 @@
+{
+  "description": "L = { a^nb^m | m > n, n ≥ 0 }",
+  "states": ["q0", "q1", "q2"],
+  "inputAlphabet": ["a", "b"],
+  "tapeAlphabet": ["a", "b", "."],
+  "initialState": "q0",
+  "blankSymbol": ".",
+  "finalStates": ["q2"],
+  "numTapes": 3,
+  "transitions": [
+    {
+      "fromState": "q0",
+      "readSymbols": ["a", ".", "."],
+      "toState": "q0",
+      "writeSymbols": ["a", "a", "."],
+      "tapeMoves": ["R", "R", "S"]
+    },
+    {
+      "fromState": "q0",
+      "readSymbols": ["b", ".", "."],
+      "toState": "q0",
+      "writeSymbols": ["b", ".", "b"],
+      "tapeMoves": ["R", "S", "R"]
+    },
+    {
+      "fromState": "q0",
+      "readSymbols": [".", ".", "."],
+      "toState": "q1",
+      "writeSymbols": [".", ".", "."],
+      "tapeMoves": ["S", "L", "L"]
+    },
+    {
+      "fromState": "q1",
+      "readSymbols": [".", "a", "b"],
+      "toState": "q1",
+      "writeSymbols": [".", ".", "."],
+      "tapeMoves": ["S", "L", "L"]
+    },
+    {
+      "fromState": "q1",
+      "readSymbols": [".", ".", "b"],
+      "toState": "q2",
+      "writeSymbols": [".", ".", "b"],
+      "tapeMoves": ["S", "S", "S"]
+    }
+  ]
+}

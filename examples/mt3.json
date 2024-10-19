@@ -1,0 +1,54 @@
+{
+  "description": "Deja la cadena invertida en la segunda cinta",
+  "states": ["q0", "q1", "q2"],
+  "inputAlphabet": ["a", "b"],
+  "tapeAlphabet": ["a", "b", "."],
+  "initialState": "q0",
+  "blankSymbol": ".",
+  "finalStates": ["q2"],
+  "numTapes": 2,
+  "transitions": [
+    {
+      "fromState": "q0",
+      "readSymbols": ["a", "."],
+      "toState": "q0",
+      "writeSymbols": ["a", "."],
+      "tapeMoves": ["R", "S"]
+    },
+    {
+      "fromState": "q0",
+      "readSymbols": ["b", "."],
+      "toState": "q0",
+      "writeSymbols": ["b", "."],
+      "tapeMoves": ["R", "S"]
+    },
+    {
+      "fromState": "q0",
+      "readSymbols": [".", "."],
+      "toState": "q1",
+      "writeSymbols": [".", "."],
+      "tapeMoves": ["L", "S"]
+    },
+    {
+      "fromState": "q1",
+      "readSymbols": ["a", "."],
+      "toState": "q1",
+      "writeSymbols": ["a", "a"],
+      "tapeMoves": ["L", "R"]
+    },
+    {
+      "fromState": "q1",
+      "readSymbols": ["b", "."],
+      "toState": "q1",
+      "writeSymbols": ["b", "b"],
+      "tapeMoves": ["L", "R"]
+    },
+    {
+      "fromState": "q1",
+      "readSymbols": [".", "."],
+      "toState": "q2",
+      "writeSymbols": [".", "."],
+      "tapeMoves": ["R", "L"]
+    }
+  ]
+}

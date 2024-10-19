@@ -1,0 +1,124 @@
+{
+  "description": "2º lenguaje práctica CC",
+  "states": ["q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"],
+  "inputAlphabet": ["a", "b", "1", "0"],
+  "tapeAlphabet": ["a", "b", "1", "0", "."],
+  "initialState": "q0",
+  "blankSymbol": ".",
+  "finalStates": ["q6"],
+  "numTapes": 3,
+  "transitions": [
+    {
+      "fromState": "q0",
+      "readSymbols": ["a", ".", "."],
+      "toState": "q0",
+      "writeSymbols": [".", "a", "."],
+      "tapeMoves": ["R", "R", "S"]
+    },
+    {
+      "fromState": "q0",
+      "readSymbols": ["b", ".", "."],
+      "toState": "q0",
+      "writeSymbols": [".", ".", "b"],
+      "tapeMoves": ["R", "S", "R"]
+    },
+    {
+      "fromState": "q0",
+      "readSymbols": [".", ".", "."],
+      "toState": "q1",
+      "writeSymbols": [".", ".", "."],
+      "tapeMoves": ["S", "S", "L"]
+    },
+    {
+      "fromState": "q1",
+      "readSymbols": [".", ".", "."],
+      "toState": "q2",
+      "writeSymbols": ["0", ".", "."],
+      "tapeMoves": ["R", "S", "S"]
+    },
+    {
+      "fromState": "q2",
+      "readSymbols": [".", ".", "."],
+      "toState": "q4",
+      "writeSymbols": [".", ".", "."],
+      "tapeMoves": ["R", "L", "S"]
+    },
+    {
+      "fromState": "q1",
+      "readSymbols": [".", ".", "b"],
+      "toState": "q3",
+      "writeSymbols": ["1", ".", "."],
+      "tapeMoves": ["R", "S", "L"]
+    },
+    {
+      "fromState": "q3",
+      "readSymbols": [".", ".", "b"],
+      "toState": "q3",
+      "writeSymbols": ["1", ".", "."],
+      "tapeMoves": ["R", "S", "L"]
+    },
+    {
+      "fromState": "q3",
+      "readSymbols": [".", ".", "."],
+      "toState": "q4",
+      "writeSymbols": [".", ".", "."],
+      "tapeMoves": ["R", "L", "S"]
+    },
+    {
+      "fromState": "q4",
+      "readSymbols": [".", "a", "."],
+      "toState": "q4",
+      "writeSymbols": ["1", ".", "."],
+      "tapeMoves": ["R", "L", "S"]
+    },
+    {
+      "fromState": "q4",
+      "readSymbols": [".", ".", "."],
+      "toState": "q5",
+      "writeSymbols": [".", ".", "."],
+      "tapeMoves": ["L", "S", "S"]
+    },
+    {
+      "fromState": "q5",
+      "readSymbols": ["1", ".", "."],
+      "toState": "q5",
+      "writeSymbols": ["1", ".", "."],
+      "tapeMoves": ["L", "S", "S"]
+    },
+    {
+      "fromState": "q5",
+      "readSymbols": [".", ".", "."],
+      "toState": "q7",
+      "writeSymbols": [".", ".", "."],
+      "tapeMoves": ["L", "S", "S"]
+    },
+    {
+      "fromState": "q7",
+      "readSymbols": ["1", ".", "."],
+      "toState": "q5",
+      "writeSymbols": ["1", ".", "."],
+      "tapeMoves": ["L", "S", "S"]
+    },
+    {
+      "fromState": "q7",
+      "readSymbols": ["0", ".", "."],
+      "toState": "q6",
+      "writeSymbols": ["0", ".", "."],
+      "tapeMoves": ["S", "S", "S"]
+    },
+    {
+      "fromState": "q7",
+      "readSymbols": [".", ".", "."],
+      "toState": "q8",
+      "writeSymbols": [".", ".", "."],
+      "tapeMoves": ["R", "S", "S"]
+    },
+    {
+      "fromState": "q8",
+      "readSymbols": [".", ".", "."],
+      "toState": "q6",
+      "writeSymbols": [".", ".", "."],
+      "tapeMoves": ["R", "S", "S"]
+    }
+  ]
+}
