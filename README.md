@@ -6,7 +6,7 @@
 * **g++:** Para compilar código C++17.
 * **make:** Para ejecutar el archivo *Makefile*.
 ## Dependencias
-Este proyecto utiliza la biblioteca `nlohmann/json` para manipular datos en formato JSON y ya se encuentra incluida en el directorio *include*. Para más información, visite los siguientse enlaces:
+Este proyecto utiliza la biblioteca `nlohmann/json` para manipular datos en formato JSON y ya se encuentra incluida en el directorio *include*. Para más información, visite los siguientes enlaces:
 
 - [nlohmann/json](https://github.com/nlohmann/json)
 - Licencia MIT: https://opensource.org/licenses/MIT
@@ -55,4 +55,5 @@ Se han desarrollado las dos máquinas pedidas en el programa JFLAP (ficheros ubi
 ![mt1](examples/jflap/mt1.png)
 - **Máquina de Turing para el lenguaje que deja en la cinta de entrada el número de *a*'s y *b*'s que contiene la cadena de entrada y el cabezal se encuentre en el primer símbolo al final.**
 ![mt2](examples/jflap/mt2.png)
+
 Estas máquinas están descritas en **formato JSON** en los ficheros *examples/mt\*.json*, cuya definición es bastante intuitiva siguiendo esos ejemplos. El programa ignorará el contenido del atributo *description*.
