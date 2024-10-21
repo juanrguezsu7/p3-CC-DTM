@@ -52,8 +52,23 @@ Una máquina de Turing es una 7-tupla M = (Q, Σ, Γ, δ, q0, B, F), donde:
 ## Máquinas de ejemplo
 Se han desarrollado las dos máquinas pedidas en el programa JFLAP (ficheros ubicados en *examples/jflap*) con **tres cintas**. A continuación, se muestran las imágenes de las máquinas de Turing desarrolladas en JFLAP:
 - **Máquina de Turing para el lenguaje L = { a^n^b^m^ | m > n, n ≥ 0 }**
+* Q = {q0, q1, q2}
+* Σ = {a, b}
+* Γ = {a, b, .}
+* q0 ∈ Q = q0
+* B ∈ Γ = .
+* F ⊆ Q = {q2}
+* δ: Q × Γ^3^ → Q × (Γ x {L, R, S})^3^
 ![mt1](examples/jflap/mt1.png)
+------------
 - **Máquina de Turing para el lenguaje que deja en la cinta de entrada el número de *a*'s y *b*'s que contiene la cadena de entrada y el cabezal se encuentre en el primer símbolo al final.**
+* Q = {q0, q1, q2, q3, q4, q5, q7, q8}
+* Σ = {a, b, 1, 0}
+* Γ = {a, b, 1, 0, .}
+* q0 ∈ Q = q0
+* B ∈ Γ = .
+* F ⊆ Q = {q6}
+* δ: Q × Γ^3^ → Q × (Γ x {L, R, S})^3^
 ![mt2](examples/jflap/mt2.png)
-
+------------
 Estas máquinas están descritas en **formato JSON** en los ficheros *examples/mt\*.json*, cuya definición es bastante intuitiva siguiendo esos ejemplos. El programa ignorará el contenido del atributo *description*.
