@@ -1,0 +1,96 @@
+{
+  "description": "Calcula el doble de un numero, considerando que un numero n se representa como 1^n",
+  "states": ["q0", "q1", "q2", "q3", "q4", "q5"],
+  "inputAlphabet": ["1"],
+  "tapeAlphabet": ["a", "1", "."],
+  "initialState": "q0",
+  "blankSymbol": ".",
+  "finalStates": ["q5"],
+  "numTapes": 1,
+  "transitions": [
+    {
+      "fromState": "q0",
+      "readSymbols": ["1"],
+      "toState": "q1",
+      "writeSymbols": ["a"],
+      "tapeMoves": ["L"]
+    },
+    {
+      "fromState": "q1",
+      "readSymbols": ["1"],
+      "toState": "q1",
+      "writeSymbols": ["1"],
+      "tapeMoves": ["L"]
+    },
+    {
+      "fromState": "q1",
+      "readSymbols": ["a"],
+      "toState": "q1",
+      "writeSymbols": ["a"],
+      "tapeMoves": ["L"]
+    },
+    {
+      "fromState": "q1",
+      "readSymbols": ["."],
+      "toState": "q2",
+      "writeSymbols": ["1"],
+      "tapeMoves": ["R"]
+    },
+    {
+      "fromState": "q2",
+      "readSymbols": ["1"],
+      "toState": "q2",
+      "writeSymbols": ["1"],
+      "tapeMoves": ["R"]
+    },
+    {
+      "fromState": "q2",
+      "readSymbols": ["a"],
+      "toState": "q3",
+      "writeSymbols": ["a"],
+      "tapeMoves": ["R"]
+    },
+    {
+      "fromState": "q3",
+      "readSymbols": ["a"],
+      "toState": "q3",
+      "writeSymbols": ["a"],
+      "tapeMoves": ["R"]
+    },
+    {
+      "fromState": "q3",
+      "readSymbols": ["1"],
+      "toState": "q1",
+      "writeSymbols": ["a"],
+      "tapeMoves": ["L"]
+    },
+    {
+      "fromState": "q3",
+      "readSymbols": ["."],
+      "toState": "q4",
+      "writeSymbols": ["."],
+      "tapeMoves": ["L"]
+    },
+    {
+      "fromState": "q4",
+      "readSymbols": ["a"],
+      "toState": "q4",
+      "writeSymbols": ["1"],
+      "tapeMoves": ["L"]
+    },
+    {
+      "fromState": "q4",
+      "readSymbols": ["1"],
+      "toState": "q4",
+      "writeSymbols": ["1"],
+      "tapeMoves": ["L"]
+    },
+    {
+      "fromState": "q4",
+      "readSymbols": ["."],
+      "toState": "q5",
+      "writeSymbols": ["."],
+      "tapeMoves": ["R"]
+    }
+  ]
+}
