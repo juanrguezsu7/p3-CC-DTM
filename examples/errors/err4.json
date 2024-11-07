@@ -1,0 +1,47 @@
+{
+    "description": "x pertenece al alfabeto pero no al de la cinta",
+    "states": ["q0", "q1", "q2"],
+    "inputAlphabet": ["0", "1"],
+    "tapeAlphabet": ["1", "."],
+    "initialState": "q0",
+    "blankSymbol": ".",
+    "finalStates": ["q2"],
+    "numTapes": 1,
+    "transitions": [
+      {
+        "fromState": "q0",
+        "readSymbols": ["0"],
+        "toState": "q1",
+        "writeSymbols": ["0"],
+        "tapeMoves": ["R"]
+      },
+      {
+        "fromState": "q0",
+        "readSymbols": ["1"],
+        "toState": "q0",
+        "writeSymbols": ["1"],
+        "tapeMoves": ["R"]
+      },
+      {
+        "fromState": "q1",
+        "readSymbols": ["0"],
+        "toState": "q0",
+        "writeSymbols": ["0"],
+        "tapeMoves": ["R"]
+      },
+      {
+        "fromState": "q1",
+        "readSymbols": ["1"],
+        "toState": "q1",
+        "writeSymbols": ["1"],
+        "tapeMoves": ["R"]
+      },
+      {
+        "fromState": "q1",
+        "readSymbols": ["."],
+        "toState": "q2",
+        "writeSymbols": ["."],
+        "tapeMoves": ["R"]
+      }
+    ]
+  }
