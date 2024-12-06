@@ -71,4 +71,4 @@ Se han desarrollado las dos máquinas pedidas en el programa JFLAP (ficheros ubi
 * δ: Q × Γ^3^ → Q × (Γ x {L, R, S})^3^
 ![mt2](examples/jflap/mt2.png)
 ------------
-Estas máquinas están descritas en **formato JSON** en los ficheros *examples/mt\*.json*, cuya definición es bastante intuitiva siguiendo esos ejemplos. El programa ignorará el contenido del atributo *description*.
+Estas máquinas están descritas en **formato JSON** en los ficheros *examples/mt\*.json*, cuya definición es muy intuitiva siguiendo esos ejemplos. El programa ignorará el contenido del atributo *description*.
